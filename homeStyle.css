@@ -1,0 +1,235 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    flex-direction: column;
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-size: 1em;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.main-body, header, .nav-wrapper, header>ul, div.links-right, .content, main, main .banner {
+    display: flex;
+}
+
+.main-body {
+    min-height: 100%;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    padding: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: rgba(3,37,65,1);
+}
+
+.content {
+    justify-content: space-between;
+    width: 100%;
+    margin-right: 5rem;
+}
+
+.logo, ul>li {
+    padding: 0.5rem;
+}
+
+header ul {
+    list-style-type: none;
+    color: white;
+}
+
+header ul>li {
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+div.links-right, header ul {
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+}
+
+main {
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-start;
+    width: 100%;
+}
+
+main .banner {
+    padding: 2rem;
+    background-image:linear-gradient(to right, rgba(3,37,65,0.8) 0%, rgba(3,37,65,0) 100%), url('images/main-banner.jpg');
+    background-color: yellow;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 300px;
+    max-height: 360px;
+    width: 100%;
+    color: white;
+    background-position: 50% 50%;
+}
+
+.title h2 {
+    margin-top: 2rem;
+    font-size: 3rem;
+}
+
+.title h3 {
+    font-size: 2rem;
+}
+
+.content-wrapper {
+    width: 100%;
+}
+
+.content-wrapper form {
+    margin-top: 3rem;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.content-wrapper form input[type=text] {
+    width: 100%;
+    height: 2.8rem;
+    font-size: 1.1em;
+    color: darkgray;
+    border: 0;
+    border-radius: 30px;
+    padding: 10px 20px;
+}
+
+.content-wrapper form input[type=text]:focus {
+    outline: none;
+}
+
+.content-wrapper form input[type=submit] {
+    color: white;
+    font-weight: 800;
+    height: 2.8rem;
+    border: 0;
+    padding: 10px 26px;
+    position: absolute;
+    top: 0;
+    right: -1px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    background-color: #71b1ca;
+    cursor: pointer;
+}
+
+.content-wrapper form input[type=submit]:hover {
+    color: black;
+}
+
+.inner-content.trending {
+    background-image: url("https://www.themoviedb.org/assets/2/v4/misc/trending-bg-39afc2a5f77e31d469b25c187814c0a2efef225494c038098d62317d923f8415.svg");
+    background-position: 50% 230px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    min-height: 450px;
+    width: 100%;
+}
+
+.inner-content .row {
+    padding-left: 2rem;
+    padding-top: 2rem;
+}
+
+.inner-content .row-header {
+    display: flex;
+    column-gap: 1.7rem;
+}
+
+.row-header .selector-toggle {
+    padding: 0;
+    border: 1px solid rgb(3, 37, 65);
+    border-radius: 30px;
+    width: fit-content;
+}
+
+.selector-toggle .toggle-button {
+    margin: 0;
+    padding: 7px 15px;
+    color: black;
+    border: none;
+    border-radius: 30px;
+    background-color: transparent;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.toggle-button.active {
+    background-color: rgb(3, 37, 65);
+    color: rgb(19, 252, 240);
+}
+
+.row-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    row-gap: 1rem;
+}
+
+.row-content .card {
+    margin-top: 1rem;
+    padding: 10px;
+    position: relative;
+}
+
+.row-content .cardimg {
+    width: 150px;
+    height: 225px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.row-content .rating {
+    display: flex;
+    margin-left: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    position: absolute;
+    bottom: 6rem;
+    z-index: 1;
+}
+
+.row-content .cardtext {
+    margin-top: 1.6rem;
+    margin-left: 10px;
+}
+
+#contentTitle:hover {
+    color: rgb(77, 146, 173);
+    cursor: pointer;
+}
+
+
+/*scrollbars designing*/
+body::-webkit-scrollbar { width: 8px;}
+.row-content::-webkit-scrollbar {height: 8px;}
+body::-webkit-scrollbar-track, .row-content::-webkit-scrollbar-track { background-color: #ffffff;}
+body::-webkit-scrollbar-thumb, .row-content::-webkit-scrollbar-thumb {
+    background-color: #d6d6d6;
+    border-radius: 5px;
+}

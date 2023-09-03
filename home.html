@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Movie Database (TMDB)</title>
+    <link href="images\title_logo.png" type="image/png" rel="icon" />
+    <link rel="stylesheet" href="homeStyle.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+    <div class="main-body">
+        <header>
+            <div class="content">
+                <div class="nav-wrapper">
+                    <a class="logo" href="home.html"><img src="images\nav-brand.svg" width="150" height="20"/></a>
+                    <ul class="navigation">
+                        <li>Movies</li>
+                        <li>TV Shows</li>
+                        <li>People</li>
+                        <li>More</li>
+                    </ul>
+                </div>
+                <div class="links-right">
+                    <ul class="nav-right">
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="signup.html">Join TMDB</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="banner">
+                <div class="content-wrapper">
+                    <div class="title">
+                        <h2>Welcome.</h2>
+                        <h3>Millions of movies, TV shows and people to discover. Explore now.</h3>
+                    </div>
+                    <div class="search">
+                        <form id="searchForm" action="search.html" method="get">
+                            <label>
+                                <input type="text" name="query" id="mainPageSearch" autocomplete="off" placeholder="Search for a movie, tv show, person....." />
+                            </label>
+                            <input type="submit" id="searchSubmit" value="Search" />
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <section class="inner-content trending">
+                <div class="row">
+                    <div class="row-header">
+                        <h2>Trending</h2>
+                        <div class="selector-toggle">
+                            <button id="today-trending" class="toggle-button active" >Today</button>
+                            <button id="week-trending" class="toggle-button " >This Week</button>
+                        </div>
+                    </div>
+                    <div class="row-content" id="trendingTodayRowContent">
+                        <!--api insert for the content-->
+                    </div>
+                    <div class="row-content" id="trendingWeek RowContent">
+                        <!--api insert for the content-->
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="jscode.js"></script>
+</body>
+</html>
